@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 
 
 
+
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
@@ -30,6 +31,7 @@ export class ModalComponent {
     return this.email.hasError('email') ? 'Not a valid email' : '';
   }
   navigate() {
+
     this.router.navigate(['users'])
   }
 }

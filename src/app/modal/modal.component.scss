@@ -1,12 +1,16 @@
-
-
 body{
     background-color: bisque;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-form{
-    margin:0 auto;
-    width: 150%;
+mat-form-field{
+    width: 320px;
 }
+
+@media screen and (min-width:768px) {
+    mat-form-field{
+        width: 540px;
+    }
+}
+

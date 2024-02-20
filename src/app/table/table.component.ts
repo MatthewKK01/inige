@@ -22,7 +22,7 @@ interface Users {
 export class TableComponent implements OnInit {
 
   constructor(private http: HttpClient) { }
-  newUserData: Users = { student_id: 12, name: 'Mate', sex: 'lala', age: 18 };
+  newUserData: Users = { student_id: null, name: '', sex: '', age: null };
 
   dataSource: Users[] = [];
   ngOnInit(): void {
@@ -33,10 +33,12 @@ export class TableComponent implements OnInit {
   }
   addUser() {
     const newUser: Users = { ...this.newUserData }; // Create a new object with the same properties
-    console.log(newUser);
+
 
     this.dataSource = [...this.dataSource, newUser];
-    console.log(this.dataSource);
+    this.newUserData = { student_id: null, name: '', sex: '', age: null };
+
+
   }
   displayedColumns: string[] = ['id', 'name', 'sex', 'age'];
 

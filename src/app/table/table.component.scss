@@ -1,7 +1,31 @@
-table{
-    width: 70%;
+.table-div{
+    width: 350px;
+    margin: 0 auto;
 }
-
 mat-form-field {
     width: 100%;
-  }
+}
+p{
+    width: 325px;
+}
+.modal-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (min-width:768px) {
+    .table-div{
+        width: 540px;
+    }
+}
+@media screen and (min-width:1124px) {
+    .table-div{
+        width: 1040px;
+    }
+}
+@media screen and (min-width:1440px) {
+    .table-div{
+        width: 1320px;
+    }
+}
