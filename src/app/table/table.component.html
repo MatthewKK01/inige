@@ -31,7 +31,20 @@
       <!-- Age Column -->
       <ng-container matColumnDef="age">
         <th mat-header-cell *matHeaderCellDef>Age</th>
-        <td mat-cell *matCellDef="let element">{{ element.age }}</td>
+        <td
+          class="d-flex justify-content-between align-items-center"
+          style="height: 56px"
+          mat-cell
+          *matCellDef="let element"
+        >
+          {{ element.age }}
+          <div class="buttons">
+            <button class="btn btn-success">Edit</button>
+            <button class="btn btn-danger" (click)="removeUser(element)">
+              Remove
+            </button>
+          </div>
+        </td>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

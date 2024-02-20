@@ -8,6 +8,10 @@ mat-form-field {
 p{
     width: 325px;
 }
+.buttons{
+    display: flex;
+    gap: 8px;
+}
 .modal-body{
     display: flex;
     flex-direction: column;

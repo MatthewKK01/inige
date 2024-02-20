@@ -40,6 +40,14 @@ export class TableComponent implements OnInit {
 
 
   }
+  removeUser(user: Users) {
+    const index = this.dataSource.findIndex((item: any) => item === user);
+
+    if (index !== -1) {
+      this.dataSource.splice(index, 1);
+      this.dataSource = [...this.dataSource];
+    }
+  }
   displayedColumns: string[] = ['id', 'name', 'sex', 'age'];
 
 }
