@@ -5,6 +5,8 @@ import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { DialogComponent } from '../dialog/dialog.component';
 
 interface Users {
   student_id: number | null;
@@ -21,7 +23,7 @@ interface Users {
 })
 export class TableComponent implements OnInit {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, public dialog: MatDialog) { }
   newUserData: Users = { student_id: null, name: '', sex: '', age: null };
 
   dataSource: Users[] = [];
@@ -49,5 +51,14 @@ export class TableComponent implements OnInit {
     }
   }
   displayedColumns: string[] = ['id', 'name', 'sex', 'age'];
-
+  openDialog(enterAnimationDuration: string, exitAnimationDuration: string, element: any): void {
+    this.dialog.open(DialogComponent, {
+      width: '370px',
+      enterAnimationDuration,
+      exitAnimationDuration,
+      data: { element: element }
+    });
+  }
 }
+
+

@@ -15,13 +15,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { MatTableModule } from '@angular/material/table';
 import { MatDialogModule } from '@angular/material/dialog';
+import { DialogComponent } from './dialog/dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
     ModalComponent,
-    TableComponent
+    TableComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,

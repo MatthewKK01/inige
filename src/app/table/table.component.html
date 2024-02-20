@@ -39,7 +39,12 @@
         >
           {{ element.age }}
           <div class="buttons">
-            <button class="btn btn-success">Edit</button>
+            <button
+              class="btn btn-success"
+              (click)="openDialog('0ms', '0ms', element)"
+            >
+              Edit
+            </button>
             <button class="btn btn-danger" (click)="removeUser(element)">
               Remove
             </button>

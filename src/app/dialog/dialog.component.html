@@ -1,0 +1,35 @@
+<h2 mat-dialog-title>Edit User</h2>
+<mat-dialog-content>
+  <!-- Display editable fields with initial values -->
+
+  <p>
+    <mat-form-field appearance="fill">
+      <mat-label>ID</mat-label>
+      <input matInput [(ngModel)]="data.element.student_id" placeholder="" />
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput [(ngModel)]="data.element.name" placeholder="" />
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="fill">
+      <mat-label>Age</mat-label>
+      <input matInput [(ngModel)]="data.element.age" placeholder="" />
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="fill">
+      <mat-label>Sex</mat-label>
+      <input matInput [(ngModel)]="data.element.sex" placeholder="" />
+    </mat-form-field>
+  </p>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="data.element" cdkFocusInitial>
+    Save
+  </button>
+</mat-dialog-actions>
